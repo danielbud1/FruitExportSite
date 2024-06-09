@@ -1,0 +1,189 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	font-family: "Montserrat", sans-serif;
+	background-color: #F5F5F5;
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url('../fonts/montserrat.ttf');
+}
+
+img, picture, video, canvas, svg {
+	display: block;
+	max-width: 100%;
+}
+
+input, button, textarea, select {
+	font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: break-word;
+}
+
+#root, #__next {
+	isolation: isolate;
+}
+
+/* Заголовки */
+h2 {
+	font-size: 52px;
+	line-height: 62px;
+	font-weight: 500;
+	text-align: center;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 600;
+	margin-top: 16px;
+	text-align: start;
+}
+
+/* Параграфы */
+p {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 140%;
+}
+
+	p span {
+		font-weight: 600;
+	}
+
+/* Контейнеры */
+.services-company {
+	max-width: 1180px;
+	margin: 109px auto 0px;
+	position: relative;
+}
+
+.services-company-head {
+	max-width: 585px;
+	min-height: 188px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+	.services-company-head p {
+		font-weight: 400;
+		font-size: 20px;
+		text-align: center;
+		margin-top: 16px;
+	}
+
+/* Изображения услуг */
+.services-images {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+
+.service {
+	width: 32%;
+	text-align: start;
+}
+
+	.service p {
+		margin-top: 16px;
+		font-size: 18px;
+	}
+
+	.service img {
+		border-radius: 5px;
+	}
+
+/* Фоновые изображения */
+.background_container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	overflow: hidden;
+}
+
+	.background_container img {
+		position: absolute;
+		pointer-events: none;
+	}
+
+.image1 {
+	top: 5%;
+	left: 15%;
+	width: 110px;
+	transform: translate(-50%, -50%);
+}
+
+.image2 {
+	top: 15%;
+	left: 20%;
+	width: 70px;
+	transform: translate(-50%, -50%);
+}
+
+.image3 {
+	top: 27%;
+	left: 6%;
+	width: 120px;
+	transform: translate(-50%, -50%);
+}
+
+.image4 {
+	top: 5%;
+	right: 15%;
+	width: 130px;
+	transform: translate(50%, -50%);
+}
+
+.image5 {
+	top: 29%;
+	right: 4%;
+	width: 90px;
+	transform: translate(50%, -50%);
+}
+
+/* Медиазапросы для адаптивности */
+@media screen and (max-width: 1196px) {
+	.image1, .image2, .image3, .image4, .image5 {
+		display: none;
+	}
+
+	.services-company {
+		margin: 0px 16px 0px;
+	}
+
+	.services-images {
+		flex-direction: column;
+		width: 100%;
+	}
+
+		.services-images img:first-child {
+			margin-bottom: 31px;
+			width: 100%;
+		}
+
+	.service {
+		margin-bottom: 31px;
+		width: 100%;
+	}
+
+		.service br {
+			display: none;
+		}
+
+	h2 {
+		font-size: 36px;
+	}
+}
